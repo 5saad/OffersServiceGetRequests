@@ -22,7 +22,6 @@ namespace OffersServiceGetRequests
 
         public async Task PostReq()
         {
-            long id = 1000000000000000;
 
             while (true)
             {
@@ -33,7 +32,7 @@ namespace OffersServiceGetRequests
                 {
                     var body = new
                     {
-                        cardAccountId = id.ToString()
+                        cardAccountId = Create16DigitString()
                     };
 
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(body);
@@ -55,9 +54,22 @@ namespace OffersServiceGetRequests
                     Console.WriteLine("An error occurred: " + ex.Message);
 
                 }
-
-                id += 1;
             }
         }
+
+        private static Random RNG = new Random();
+
+        public string Create16DigitString()
+        {
+            var builder = new StringBuilder();
+            while (builder.Length < 16)
+            {
+                builder.Append(RNG.Next(10).ToString());
+            }
+            return builder.ToString();
+        }
+
+
+
     }
 }
