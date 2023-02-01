@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,36 +13,44 @@ namespace OffersServiceGetRequests
 
         private HttpClient client;
         private string endpoint;
+        private string accessToken;
 
-        public GetRequest(string endpoint)
+
+        public GetRequest(string endpoint, string accessToken)
         {
             this.client = new HttpClient();
             this.endpoint = endpoint;
+            this.accessToken = accessToken;
         }
 
-        public async Task GetReq(int numberOfRequests)
+        public async Task GetReq()
         {
 
-            for (int i = 0; i < numberOfRequests; i++)
+            while (true)
             {
-                try
-                {
-                    HttpResponseMessage response = await client.GetAsync(endpoint);
 
-                    if (response.IsSuccessStatusCode)
+                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+                  
+                    try
                     {
-                        Console.WriteLine("Sucess: " + (int)response.StatusCode);
+                        HttpResponseMessage response = await client.GetAsync(endpoint);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            Console.WriteLine("Sucess: " + (int)response.StatusCode);
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Failed: " + (int)response.StatusCode);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("An error occurred: " + ex.Message);
 
                     }
-                    else
-                    {
-                        Console.WriteLine("Failed: " + (int)response.StatusCode);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("An error occurred: " + ex.Message);
-                }
+                
             }
         }
 

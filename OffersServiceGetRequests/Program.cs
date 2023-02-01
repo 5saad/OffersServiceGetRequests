@@ -1,5 +1,8 @@
 ﻿using OffersServiceGetRequests;
 
-GetRequest get = new GetRequest("https://jsonplaceholder.typicode.com/posts/1");
+string endpoint = "";
+string accessToken = "";
 
-await get.GetReq(100);
+GetRequest get = new GetRequest(endpoint, accessToken);
+
+await get.GetReq();
