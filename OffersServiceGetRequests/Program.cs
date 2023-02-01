@@ -3,6 +3,14 @@
 string endpoint = "";
 string accessToken = "";
 
-GetRequest get = new GetRequest(endpoint, accessToken);
+Task[] tasks = new Task[100];
 
-await get.GetReq();
+for (int i = 0; i < 100; i++)
+{
+    GetRequest request = new GetRequest(endpoint, accessToken);
+    tasks[i] = request.GetReq();
+}
+await Task.WhenAll(tasks);
+
+
+
