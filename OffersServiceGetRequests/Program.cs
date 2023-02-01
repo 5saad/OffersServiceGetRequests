@@ -2,14 +2,14 @@
 
 string endpoint = "";
 string accessToken = "";
-int numTasks = 100;
+    int numTasks = 1;
 
 Task[] tasks = new Task[numTasks];
 
 for (int i = 0; i < numTasks; i++)
 {
-    GetRequest request = new GetRequest(endpoint, accessToken);
-    tasks[i] = request.GetReq();
+    PostRequest request = new PostRequest(endpoint, accessToken);
+    tasks[i] = request.PostReq();
 }
 await Task.WhenAll(tasks);
 

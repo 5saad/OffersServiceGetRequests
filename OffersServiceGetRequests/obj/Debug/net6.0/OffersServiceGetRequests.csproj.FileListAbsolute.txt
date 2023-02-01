@@ -28,3 +28,5 @@ C:\Users\S02090\Documents\consoleapps\OffersServiceGetRequests\OffersServiceGetR
 C:\Users\S02090\Documents\consoleapps\OffersServiceGetRequests\OffersServiceGetRequests\obj\Debug\net6.0\OffersServiceGetRequests.pdb
 C:\Users\S02090\Documents\consoleapps\OffersServiceGetRequests\OffersServiceGetRequests\obj\Debug\net6.0\OffersServiceGetRequests.genruntimeconfig.cache
 C:\Users\S02090\Documents\consoleapps\OffersServiceGetRequests\OffersServiceGetRequests\obj\Debug\net6.0\ref\OffersServiceGetRequests.dll
+C:\Users\S02090\Documents\consoleapps\OffersServiceGetRequests\OffersServiceGetRequests\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\S02090\Documents\consoleapps\OffersServiceGetRequests\OffersServiceGetRequests\obj\Debug\net6.0\OffersServiceGetRequests.csproj.CopyComplete
