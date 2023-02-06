@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,21 +33,29 @@ namespace OffersServiceGetRequests
                 {
                     var body = new
                     {
-                        cardAccountId = Create16DigitString()
+                        cardAccountId = "7365010001121626"
                     };
 
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(body);
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
 
+                    Stopwatch watch = Stopwatch.StartNew();
+
                     HttpResponseMessage response = await client.PostAsync(endpoint, content);
+
+                    watch.Stop();
+                    var elapsed = watch.ElapsedMilliseconds;
+
+
+                    //var elapsed = Math.Round((finish - start).TotalMilliseconds);
 
                     if (response.IsSuccessStatusCode)
                     {
-                        Console.WriteLine("Sucess: " + (int)response.StatusCode);
+                        Console.WriteLine("Sucess: " + (int)response.StatusCode + ", Time elapsed: " + elapsed + "ms");
                     }
                     else
                     {
-                        Console.WriteLine("Failed: " + (int)response.StatusCode);
+                        Console.WriteLine("Failed: " + (int)response.StatusCode + ", Time elapsed: "+ elapsed + "ms");
                     }
                 }
                 catch (Exception ex)
