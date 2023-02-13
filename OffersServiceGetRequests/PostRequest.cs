@@ -24,7 +24,7 @@ namespace OffersServiceGetRequests
         public async Task PostReq()
         {
 
-            while (true)
+  
             {
 
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
@@ -41,21 +41,26 @@ namespace OffersServiceGetRequests
 
                     Stopwatch watch = Stopwatch.StartNew();
 
+                    String startTime = DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss:ffff");
+
                     HttpResponseMessage response = await client.PostAsync(endpoint, content);
 
                     watch.Stop();
                     var elapsed = watch.ElapsedMilliseconds;
 
 
-                    //var elapsed = Math.Round((finish - start).TotalMilliseconds);
+                    
 
                     if (response.IsSuccessStatusCode)
                     {
-                        Console.WriteLine("Sucess: " + (int)response.StatusCode + ", Time elapsed: " + elapsed + "ms");
+
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine("Sucess: " + (int)response.StatusCode + ", Time: "+startTime + ", Elapsed: " + elapsed + "ms", Console.ForegroundColor);
                     }
                     else
                     {
-                        Console.WriteLine("Failed: " + (int)response.StatusCode + ", Time elapsed: "+ elapsed + "ms");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Failed: " + (int)response.StatusCode + ", Time: " + startTime + ", Elapsed: " + elapsed + "ms", Console.ForegroundColor);
                     }
                 }
                 catch (Exception ex)

@@ -6,12 +6,15 @@ int numTasks = 100;
 
 Task[] tasks = new Task[numTasks];
 
-for (int i = 0; i < numTasks; i++)
+while (true)
 {
-    PostRequest request = new PostRequest(endpoint, accessToken);
-    tasks[i] = request.PostReq();
+    for (int i = 0; i < numTasks; i++)
+    {
+        PostRequest request = new PostRequest(endpoint, accessToken);
+        tasks[i] = request.PostReq();
+    }
+    await Task.WhenAll(tasks);
 }
-await Task.WhenAll(tasks);
 
 
 
