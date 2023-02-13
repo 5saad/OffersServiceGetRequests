@@ -41,7 +41,7 @@ namespace OffersServiceGetRequests
 
                     Stopwatch watch = Stopwatch.StartNew();
 
-                    String startTime = DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss:ffff");
+                    DateTime startTime = DateTime.Now;
 
                     HttpResponseMessage response = await client.PostAsync(endpoint, content);
 
@@ -55,12 +55,12 @@ namespace OffersServiceGetRequests
                     {
 
                         Console.ForegroundColor = ConsoleColor.Gray;
-                        Console.WriteLine("Sucess: " + (int)response.StatusCode + ", Time: "+startTime + ", Elapsed: " + elapsed + "ms", Console.ForegroundColor);
+                        Console.WriteLine("Sucess: " + (int)response.StatusCode + " - " + startTime + " - " + elapsed + "ms", Console.ForegroundColor);
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Failed: " + (int)response.StatusCode + ", Time: " + startTime + ", Elapsed: " + elapsed + "ms", Console.ForegroundColor);
+                        Console.WriteLine("Failed: " + (int)response.StatusCode + " - " + startTime + " - " + elapsed + "ms", Console.ForegroundColor);
                     }
                 }
                 catch (Exception ex)
