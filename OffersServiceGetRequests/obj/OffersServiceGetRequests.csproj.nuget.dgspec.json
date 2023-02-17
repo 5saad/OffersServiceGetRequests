@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\S02090\\Documents\\consoleapps\\OffersServiceGetRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj": {}
+    "C:\\dev\\OffersServiceRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\S02090\\Documents\\consoleapps\\OffersServiceGetRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj": {
+    "C:\\dev\\OffersServiceRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\S02090\\Documents\\consoleapps\\OffersServiceGetRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj",
+        "projectUniqueName": "C:\\dev\\OffersServiceRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj",
         "projectName": "OffersServiceGetRequests",
-        "projectPath": "C:\\Users\\S02090\\Documents\\consoleapps\\OffersServiceGetRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj",
+        "projectPath": "C:\\dev\\OffersServiceRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj",
         "packagesPath": "C:\\Users\\S02090\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\S02090\\Documents\\consoleapps\\OffersServiceGetRequests\\OffersServiceGetRequests\\obj\\",
+        "outputPath": "C:\\dev\\OffersServiceRequests\\OffersServiceGetRequests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\S02090\\AppData\\Roaming\\NuGet\\NuGet.Config",

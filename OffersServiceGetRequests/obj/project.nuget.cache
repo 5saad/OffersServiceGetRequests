@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bw2vFbRAWdcF49a52+AcMDGA/1fi8lrema0YRhcXLxX96noh29Ww9kSy6GOhB8S7w5yyIU7uvDwuyUY88LaDew==",
+  "dgSpecHash": "xPpcuYWA3umYUgwprXt9VdFIOZbCtnXTqGHeqGnQCuCPML7vmCxqkO5KAAbP7nDuY3p5rSsKlgFqycBKh7IX9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S02090\\Documents\\consoleapps\\OffersServiceGetRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj",
+  "projectFilePath": "C:\\dev\\OffersServiceRequests\\OffersServiceGetRequests\\OffersServiceGetRequests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S02090\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],

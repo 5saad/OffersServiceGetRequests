@@ -1,7 +1,14 @@
 ﻿using OffersServiceGetRequests;
+using System;
 
-string endpoint = "";
-string accessToken = "";
+string endpoint = "https://funapnftfdoff0101.azurewebsites.net/api/v1/getOffers?";
+
+Uri uri = new Uri(endpoint);
+string url = uri.GetLeftPart(UriPartial.Authority);
+
+GetToken token = new GetToken(url);
+string accessToken =token.GrabToken();
+
 int numTasks = 100;
 
 Task[] tasks = new Task[numTasks];
